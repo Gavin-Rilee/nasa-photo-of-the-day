@@ -1,9 +1,19 @@
 
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import Header from './componets/TopPage';
-import Main from './componets/Main';
+import Header from './Components/TopPage';
+import Main from './Components/Main';
 import axios from 'axios';
+import styled from 'styled-components'
+
+const Styledbackground = styled.div`
+background: #15418C;
+background: -moz-linear-gradient(-45deg, #15418C 0%, #FDE5E2 50%, #FC3D21 100%);
+background: -webkit-linear-gradient(-45deg, #15418C 0%, #FDE5E2 50%, #FC3D21 100%);
+background: linear-gradient(135deg, #15418C 0%, #FDE5E2 50%, #FC3D21 100%);
+
+`
+
 function App() {
  
 
@@ -24,10 +34,10 @@ function App() {
 useEffect(getData, [])
 
 return (
-  <div className="App">
+  <Styledbackground className="App">
   <Header/>
-  <Main imgSrc = {theData.url} imgAlt = {theData.title}/>
-  </div>
+  <Main imgSrc = {theData.url} imgAlt = {theData.title} media = {theData.media_type} imgexp = {theData.explanation} copyright = {theData.copyright} date = {theData.date}/>
+  </Styledbackground>
 );
 
 
