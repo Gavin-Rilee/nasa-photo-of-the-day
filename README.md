@@ -65,6 +65,11 @@ DEMO KEY rate limits:
 
 > Daily Limit: 50 requests per IP address per day
 
+https://api.nasa.gov/planetary/apod?api_key=rlfY8FaB1bQU5rZiEtfrUsGFJf7He7ic6LSDiatS
+
+
+
+
 _Note: if the photo url is NOT a photo, you will need to learn how to display a video in a React app on your own, OR just fetch the APOD from a different date by adding this to the back of the API endpoint: `&date=2012-03-14`_
 
 **Adding the Data to State**
